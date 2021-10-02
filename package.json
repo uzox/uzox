@@ -6,7 +6,7 @@
   "author": "moquent",
   "private": true,
   "homepage": "https://www.uzox.tech",
-  "repository": "https://uzox.tech/invite",
+  "repository": "https://github.com/uzox/uzox/",
   "engines": {
     "node": ">=16.0.0"
   },
