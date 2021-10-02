@@ -1,0 +1,19 @@
+{
+    "TOKEN": "BOT TOKEN",
+    "DEFAULT_PREFIX": ".",
+    "MONGODB_URI": "MONGODB URI",
+    "SPOTIFY_API_CONFIG": {
+        "clientId": "CLIENT ID",
+        "clientSecret": "CLIENT SECRET"
+    },
+    "LAVALINK_SERVERS": [
+        {
+            "identifier": "NAME",
+            "host": "IP",
+            "port": 2333,
+            "password": "youshallnotpass",
+            "retryDelay": 6000,
+            "retryAmount": 100
+        }
+    ]
+}
