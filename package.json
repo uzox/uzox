@@ -1,0 +1,32 @@
+{
+  "name": "uzox-2.2",
+  "version": "2.2.1",
+  "description": "Music Discord Bot",
+  "main": "index.js",
+  "author": "moquent",
+  "private": true,
+  "homepage": "https://www.uzox.tech",
+  "repository": "https://uzox.tech/invite",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "discord.js": "^13.1.0",
+    "dotenv": "^8.2.0",
+    "erela.js": "^2.3.3",
+    "erela.js-deezer": "^1.0.7",
+    "erela.js-spotify": "^1.2.0",
+    "https": "^1.0.0",
+    "humanize-duration": "^3.27.0",
+    "merge-images": "^2.0.0",
+    "mongoose": "^5.12.3",
+    "os": "^0.1.1",
+    "prompt-sync": "^4.2.0",
+    "request": "^2.88.2",
+    "string-progressbar": "1.0.1"
+  },
+  "scripts": {
+    "start": "node ."
+  }
+}
