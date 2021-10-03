@@ -1,4 +1,4 @@
-const embedContent = require("../../../src/util/embedContent");
+const embedContent = require("../util/embedContent");
 
 module.exports = {
     async canModifyQueue(member, guild, voiceChannel, textChannel, client) {
