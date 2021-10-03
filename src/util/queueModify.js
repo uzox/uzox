@@ -1,4 +1,4 @@
-const embedContent = require("../../../src/util/embedContent");
+const embedContent = require("./embedContent");
 
 module.exports = {
   async canModifyQueue(message, play, pn) {
