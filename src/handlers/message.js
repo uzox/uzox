@@ -1,4 +1,4 @@
-const { MessageEmbed, Collection } = require("discord.js");
+const { Collection } = require("discord.js");
 const embedContent = require("../util/embedContent");
 const checkPrefix = require("../util/checkPrefix");
 const escapeRegex = (str) => str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
