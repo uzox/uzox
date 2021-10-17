@@ -45,7 +45,7 @@ module.exports = {
     ) {
       message.reply({
         embeds: [embedMessage(
-          "**`play`:** Enter song name or link from Spotify/YouTube/Soundcloud/Twitch(Live) and more to play a Song/Playlist.\n\n**`skip`:** Skips the current playing sound / adds vote to skip(If DJ mode is enabled).\n\n**`stop`:** Clears queue and disconnects bot from the voice channel.\n\n**`pause`:** Pauses current song.\n\n**`resume`:** Resumes the paused song.\n\n**`search`:** Searches for tracks on YouTube based on given name.\n\n**`nowplaying`:** Shows track being played currently.\n\n**`playnext`:** Plays given track next.\n\n**`seek`:** Seeks to given timestamp in track.\n\n**`forward`:** Forwards by given amount of time."
+          "**`play`:** Enter song name or link from Spotify/YouTube/Soundcloud/Twitch(Live) and more to play a Song/Playlist.\n\n**`skip`:** Skips the current playing sound / adds vote to skip(If DJ mode is enabled).\n\n**`stop`:** Clears queue and disconnects bot from the voice channel.\n\n**`pause`:** Pauses current song.\n\n**`resume`:** Resumes the paused song.\n\n**`search`:** Searches for tracks on YouTube based on given name.\n\n**`nowplaying`:** Shows track being played currently.\n\n**`playnext`:** Plays given track next.\n\n**`seek`:** Seeks to given timestamp in track.\n\n**`forward`:** Forwards by given amount of time.\n\n**`lyrics`:** Shows you the lyrics for a playing song or for a given search term."
         )
           .setTitle("🎶 Music Control Commands")
           .setFooter(
