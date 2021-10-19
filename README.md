@@ -1,9 +1,12 @@
 
-# Uzox
+# [Uzox](https://uzox.tech/)
 
-A Discord Music Bot!
-
-
+A Discord Music Bot
+<br />
+<br />
+Please note that this code is not even with the main source code of Uzox and includes major changes.
+<br />
+This code may not be as efficient, but you can make it! Check the contributing section of this readme.
 
 
 ![Logo](https://raw.githubusercontent.com/Moquent/cdn/main/uzox.svg)
