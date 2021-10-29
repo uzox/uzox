@@ -70,7 +70,7 @@ module.exports = {
           )]
       });
     }
-    if (args[0] === "10" || args[0].toLowerCase() === "settings") {
+    if (args[0] === "3" || args[0].toLowerCase() === "settings") {
       message.reply({
         embeds: [embedMessage(
           "**`setprefix`**: Changes the bot prefix for the server."
