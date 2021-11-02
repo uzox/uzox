@@ -2,7 +2,7 @@ const { TOKEN, DEFAULT_PREFIX, MONGODB_URI, LAVALINK_SERVERS, SPOTIFY_API_CONFIG
 const { Client, Collection, Intents } = require("discord.js");
 const { Manager } = require("erela.js");
 const mongoose = require("mongoose");
-const SpotifyPlugin = require("erela.js-spotify");
+const SpotifyPlugin = require("better-erela.js-spotify");
 const DeezerPlugin = require("erela.js-deezer");
 const cooldowns = new Collection();
 
