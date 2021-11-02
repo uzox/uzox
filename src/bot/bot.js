@@ -48,7 +48,7 @@ client.manager = new Manager({
     if (guild) guild.shard.send(payload);
   },
   plugins: [
-    SPOTIFY_API_CONFIG ? new SpotifyPlugin({
+    SPOTIFY_API_CONFIG.clientId && SPOTIFY_API_CONFIG.clientSecret ? new SpotifyPlugin({
       clientID: SPOTIFY_API_CONFIG.clientId,
       clientSecret: SPOTIFY_API_CONFIG.clientSecret,
     }) : new SpotifyPlugin(),
