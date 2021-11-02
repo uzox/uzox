@@ -3,8 +3,8 @@
     "DEFAULT_PREFIX": ".",
     "MONGODB_URI": "MONGODB URI",
     "SPOTIFY_API_CONFIG": {
-        "clientId": "CLIENT ID",
-        "clientSecret": "CLIENT SECRET"
+        "clientId": "LEAVE THIS BLANK IF YOU DON'T HAVE IT",
+        "clientSecret": "LEAVE THIS BLANK IF YOU DON'T HAVE IT"
     },
     "LAVALINK_SERVERS": [
         {
