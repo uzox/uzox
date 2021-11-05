@@ -17,8 +17,8 @@ module.exports = async (res, player, message) => {
             break;
 
         case "PLAYLIST_LOADED":
-            player.queue.add(res.tracks);
-            if (!player.playing && !player.paused && player.queue.totalSize === tracks.length) player.play();
+	        player.queue.add(res.tracks);
+            if (!player.playing && !player.paused && player.queue.totalSize === res.tracks.length) player.play();
             if (!res.playlist) return;
 
             return message.channel.send({ embeds: [embedMessage(`Added a playlist **${res.playlist.name}** with ${res.tracks.length} tracks`)] });
