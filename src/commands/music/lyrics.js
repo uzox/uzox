@@ -23,7 +23,7 @@ module.exports = {
 
     try {
       track = await fetchLyrics(title);
-      lyrics = track && track?.lyrics ? track.lyrics : `No lyrics found for ${title}.`;
+      lyrics = track && track.lyrics ? track.lyrics : `No lyrics found for ${title}.`;
     } catch (error) {
       lyrics = `No lyrics found for ${title}.`;
     }
@@ -35,7 +35,7 @@ module.exports = {
     }
 
     let lyricsEmbed = embedMessage(lyrics);
-    if (track.title)
+    if (track?.title)
       lyricsEmbed.setTitle(`${track.title}\n${track.artist}`);
 
     if (lyricsEmbed.description.length >= 2048)
