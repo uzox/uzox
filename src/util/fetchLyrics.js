@@ -9,7 +9,7 @@ module.exports = async (query) => {
             lyrics: (await axios({ url: `https://api.lyrics.ovh/v1/${data.artist}/${data.track}` })).data.lyrics
         };
 
-    if (!track) return undefined;
+    if (!track.title) return undefined;
     if (!track.lyrics) return undefined;
 
     return track;
