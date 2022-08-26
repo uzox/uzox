@@ -10,7 +10,7 @@ module.exports = {
         const player = message.client.manager.get(message.guild.id);
         let songs = player.queue;
 
-        for (let i = songs.length - 1; i > 1; i--) {
+        for (let i = songs.length - 1; i > 0; i--) {
             let j = 1 + Math.floor(Math.random() * i);
             [songs[i], songs[j]] = [songs[j], songs[i]];
         }
