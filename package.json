@@ -20,7 +20,7 @@
     "https": "^1.0.0",
     "humanize-duration": "^3.27.0",
     "merge-images": "^2.0.0",
-    "mongoose": "^5.12.3",
+    "mongoose": "^5.13.15",
     "os": "^0.1.1",
     "prompt-sync": "^4.2.0",
     "request": "^2.88.2",
