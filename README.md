@@ -4,7 +4,7 @@
 A Discord Music Bot
 <br />
 <br />
-Please note that this code is not even with the main source code of Uzox and includes major changes.
+Please note that this code is not even with the main source code of Uzox and includes major changes. After the 31st of August, 2022, you have to enable the "Message Content" intent to be able to use this source code.
 <br />
 This code may not be as efficient, but you can make it! Check the contributing section of this readme.
 
