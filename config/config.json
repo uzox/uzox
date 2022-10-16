@@ -1,19 +1,20 @@
 {
-    "TOKEN": "BOT TOKEN",
+    "TOKEN": "",
+    "NAME": "",
     "DEFAULT_PREFIX": ".",
-    "MONGODB_URI": "MONGODB URI",
+    "MONGODB_URI": "",
+    "MICROSERVICES_API": "https://uzox.xyz/api/",
     "SPOTIFY_API_CONFIG": {
-        "clientId": "LEAVE THIS BLANK IF YOU DON'T HAVE IT",
-        "clientSecret": "LEAVE THIS BLANK IF YOU DON'T HAVE IT"
+        "clientId": "",
+        "clientSecret": "",
+        "redirectUri": ""
     },
     "LAVALINK_SERVERS": [
         {
-            "identifier": "NAME",
-            "host": "IP",
-            "port": 2333,
-            "password": "youshallnotpass",
-            "retryDelay": 6000,
-            "retryAmount": 100
+            "name": "name",
+            "url": "ip:port",
+            "auth": "password",
+            "secure": false
         }
     ]
 }

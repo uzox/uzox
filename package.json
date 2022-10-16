@@ -1,32 +1,35 @@
 {
-  "name": "uzox-2.2",
-  "version": "2.2.1",
+  "name": "uzox",
+  "version": "3.0.0",
   "description": "Music Discord Bot",
-  "main": "index.js",
+  "main": "shard.js",
   "author": "moquent",
   "private": true,
-  "homepage": "https://www.uzox.tech",
-  "repository": "https://github.com/uzox/uzox/",
+  "homepage": "https://www.uzox.xyz",
+  "repository": "https://github.com/uzox/uzox",
   "engines": {
     "node": ">=16.0.0"
   },
   "dependencies": {
+    "@aero/centra": "^1.0.8",
     "axios": "^0.21.1",
-    "discord.js": "^13.1.0",
-    "dotenv": "^8.2.0",
-    "erela.js": "^2.3.3",
-    "erela.js-deezer": "^1.0.7",
-    "better-erela.js-spotify": "^1.1.3",
+    "chalk": "4.1.2",
+    "discord.js": "^14.5.0",
     "https": "^1.0.0",
     "humanize-duration": "^3.27.0",
-    "merge-images": "^2.0.0",
-    "mongoose": "^5.13.15",
+    "md5": "^2.3.0",
+    "mongoose": "5.12.13",
+    "ms": "^2.1.3",
+    "node-fetch": "^2.6.1",
     "os": "^0.1.1",
+    "path": "^0.12.7",
     "prompt-sync": "^4.2.0",
-    "request": "^2.88.2",
+    "shoukaku": "2.1.6",
+    "spotify-web-api-node": "^5.0.2",
     "string-progressbar": "1.0.1"
   },
   "scripts": {
-    "start": "node ."
+    "dev": "node .",
+    "start": "NODE_ENV=production node ."
   }
 }
