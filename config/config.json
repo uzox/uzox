@@ -1,0 +1,20 @@
+{
+    "TOKEN": "",
+    "NAME": "",
+    "DEFAULT_PREFIX": ".",
+    "MONGODB_URI": "",
+    "MICROSERVICES_API": "https://uzox.xyz/api/",
+    "SPOTIFY_API_CONFIG": {
+        "clientId": "",
+        "clientSecret": "",
+        "redirectUri": ""
+    },
+    "LAVALINK_SERVERS": [
+        {
+            "name": "name",
+            "url": "ip:port",
+            "auth": "password",
+            "secure": false
+        }
+    ]
+}
