@@ -40,6 +40,7 @@ Note: Lavalink servers are JAR files which should be hosted on a server or local
 To download it go to [the Official CI server](https://ci.fredboat.com/viewLog.html?buildId=lastSuccessful&buildTypeId=Lavalink_Build&tab=artifacts&guest=1) and download the Lavalink.jar file.
 
 You also need to configure the Lavalink server with an application.yml file in the same directory as your JAR. There is a premade one in the resources folder which will work without any issues.
+Update the plugin versions regularly by visiting [https://github.com/TopiSenpai/LavaSrc/](https://github.com/TopiSenpai/LavaSrc/releases) and [https://github.com/DuncteBot/skybot-lavalink-plugin/](https://github.com/DuncteBot/skybot-lavalink-plugin/releases) and checking the latest version available.
 
 You can get the full version of Uzox hosted by us completely for a very low price at our [Patreon](https://patreon.com/uzox/) page!
 
