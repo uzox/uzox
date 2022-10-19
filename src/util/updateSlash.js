@@ -11,6 +11,7 @@ module.exports = async (client) => {
         { name: "stop", description: "Disconnect the bot from the voice channel", type: ApplicationCommandType.ChatInput },
         { name: "help", description: "Show all the commands of the bot to use", type: ApplicationCommandType.ChatInput },
         { name: "removedefaultchannel", description: "Remove the default text channel configuration to respond everywhere", type: ApplicationCommandType.ChatInput },
+        { name: "removeduplicates", description: "Remove all duplicate tracks from the queue", type: ApplicationCommandType.ChatInput },
         {
             name: "setdefaultchannel", description: "Configure a default text channel to respond in", type: ApplicationCommandType.ChatInput,
             options: [
@@ -73,5 +74,9 @@ module.exports = async (client) => {
                         { name: "track", value: "track", },
                         { name: "queue", value: "queue" }]
                 }]
+        }, {
+            name: "lyrics", description: "Get the lyrics of a track", type: ApplicationCommandType.ChatInput,
+            options: [
+                { name: "name", type: ApplicationCommandOptionType.String, description: "Name of the song to fetch lyrics" }]
         }])
 }
