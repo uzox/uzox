@@ -71,10 +71,10 @@ async function getRes(t, node) {
     }
     return res;
   } catch (err) {
-    res = await node.rest.resolve(`spsearch:${t}`);
+    res = await node.rest.resolve(`ytsearch:${t}`);
     if (!res) {
       for (let i = 0; i < 5; i++) {
-        res = await node.rest.resolve(`spsearch:${t}`);
+        res = await node.rest.resolve(`ytsearch:${t}`);
         if (res) break;
       }
     }
