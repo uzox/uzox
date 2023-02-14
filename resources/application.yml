@@ -4,14 +4,15 @@ server: # REST and WS server
 plugins:
   lavasrc:
     providers: # Custom providers for track loading. This is the default
-      - "ytsearch:\"%ISRC%\"" # Will be ignored if track does not have an ISRC. See https://en.wikipedia.org/wiki/International_Standard_Recording_Code
-      - "ytsearch:%QUERY%" # Will be used if track has no ISRC or no track could be found for the ISRC
+      - "ytmsearch:\"%ISRC%\"" # Will be ignored if track does not have an ISRC. See https://en.wikipedia.org/wiki/International_Standard_Recording_Code
+      - "ytmsearch:%QUERY%" # Will be used if track has no ISRC or no track could be found for the ISRC
       - "dzisrc:\"%ISRC%\"" # Deezer ISRC provider
       - "scsearch:%QUERY%" # you can add multiple other fallback sources here
     sources:
       spotify: true # Enable Spotify source
       applemusic: true # Enable Apple Music source
       deezer: true # Enable Deezer source
+      yandexmusic: true # Enable Yandex Music source
     spotify:
       clientId: ""
       clientSecret: ""
@@ -20,6 +21,8 @@ plugins:
       masterDecryptionKey: "" # the master key used for decrypting the deezer tracks. (yes this is not here you need to get it from somewhere else)
     applemusic:
       countryCode: "US" # the country code you want to use for filtering the artists top tracks and language. See https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
+    yandexmusic:
+      accessToken: "" # the token used for accessing the yandex music api. See https://github.com/TopiSenpai/LavaSrc#yandex-music
   dunctebot:
     ttsLanguage: "en-AU" # language of the TTS engine
     sources:
@@ -35,9 +38,9 @@ plugins:
       soundgasm: true # soundgasm.net
 lavalink:
   plugins:
-    - dependency: "com.github.TopiSenpai.LavaSrc:lavasrc-plugin:3.0.7" # replace vx.x.x with the latest release tag!
+    - dependency: "com.github.TopiSenpai.LavaSrc:lavasrc-plugin:3.2.0" # replace vx.x.x with the latest release tag!
       repository: "https://jitpack.io"
-    - dependency: "com.dunctebot:skybot-lavalink-plugin:1.4.0"
+    - dependency: "com.dunctebot:skybot-lavalink-plugin:1.4.1"
       repository: "https://m2.duncte123.dev/releases"
   server:
     password: ""
