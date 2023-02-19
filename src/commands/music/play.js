@@ -24,7 +24,6 @@ module.exports = {
       if (!res?.tracks?.length && !fav) return await message.reply({ embeds: [embedMessage("Couldn't find a matching track.")], ephemeral: true });
       await loadRes(res, node, message);
     } catch (err) {
-      console.log(err);
       return message.reply({ embeds: [embedMessage(`There was an error playing **${search}**.`)], ephemeral: true });
     }
 
@@ -32,7 +31,6 @@ module.exports = {
       let track = res.tracks.shift();
       track.info.requester = message.author;
       let q = await message.client.manager.queue.handle(message.guild, message.member, message.channel, node, track);
-      console.log(track)
       q?.play();
       if (res.loadType == "PLAYLIST_LOADED") {
         for (const track of res.tracks) {
