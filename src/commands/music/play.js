@@ -24,6 +24,7 @@ module.exports = {
       if (!res?.tracks?.length && !fav) return await message.reply({ embeds: [embedMessage("Couldn't find a matching track.")], ephemeral: true });
       await loadRes(res, node, message);
     } catch (err) {
+      console.log(err);
       return message.reply({ embeds: [embedMessage(`There was an error playing **${search}**.`)], ephemeral: true });
     }
 
@@ -31,6 +32,7 @@ module.exports = {
       let track = res.tracks.shift();
       track.info.requester = message.author;
       let q = await message.client.manager.queue.handle(message.guild, message.member, message.channel, node, track);
+      console.log(track)
       q?.play();
       if (res.loadType == "PLAYLIST_LOADED") {
         for (const track of res.tracks) {
@@ -46,21 +48,12 @@ module.exports = {
         });
         try { return setTimeout(async () => await message.deleteReply(), 40000) } catch (err) { return }
       }
-      if(track.info.title.includes('-')){
-        message.reply({
-          embeds: [embedMessage()
-            .addFields({ name: "Track Queued: ", value: `[\`${track.info.title.substring(0, 100)}\`](${track.info.uri})`, inline: true })
-            .addFields({ name: "Requested By: ", value: `${message.author}`, inline: true })
-            .addFields({ name: "Duration: ", value: track.info.isStream ? `\`🔴 LIVE\`` : `\`${new Date(track.info.length).toISOString().substr(11, 8)}\``, inline: true })]
-        });
-      }else{
-        message.reply({
-          embeds: [embedMessage()
-            .addFields({ name: "Track Queued: ", value: `[\`${track.info.author.substring(0, 100)}\` - \`${track.info.title.substring(0, 100)}\`](${track.info.uri})`, inline: true })
-            .addFields({ name: "Requested By: ", value: `${message.author}`, inline: true })
-            .addFields({ name: "Duration: ", value: track.info.isStream ? `\`🔴 LIVE\`` : `\`${new Date(track.info.length).toISOString().substr(11, 8)}\``, inline: true })]
-        });
-      }
+      message.reply({
+        embeds: [embedMessage()
+          .addFields({ name: "Track Queued: ", value: `[\`${track.info.title.substring(0, 100)}\`](${track.info.uri})`, inline: true })
+          .addFields({ name: "Requested By: ", value: `${message.author}`, inline: true })
+          .addFields({ name: "Duration: ", value: track.info.isStream ? `\`🔴 LIVE\`` : `\`${new Date(track.info.length).toISOString().substr(11, 8)}\``, inline: true })]
+      });
       try { return setTimeout(async () => await message.deleteReply(), 60000) } catch (err) { return }
     }
   },
