@@ -75,7 +75,7 @@ async function getRes(songId, node) {
     const result = await node.rest.resolve(`ytsearch:${songId}`);
     if (!result) {
       for (let i = 0; i < 5; i++) {
-        result = await node.rest.resolve(`ytsearch:${songId}`);
+        const result = await node.rest.resolve(`ytsearch:${songId}`);
         if (result) break;
       }
     }
