@@ -62,7 +62,6 @@ class MusicDispatcher {
     async play() {
         if (!this.exists || !this.queue.length) return await this.destroy();
         this.current = this.queue.shift();
-        console.log(this.current)
         await this.player.playTrack({ track: this.current.track });
     }
 
