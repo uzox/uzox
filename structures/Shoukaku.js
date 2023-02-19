@@ -1,10 +1,10 @@
-const { Shoukaku, Libraries } = require("shoukaku");
+const { Shoukaku, Connectors } = require("shoukaku");
 const chalk = require("chalk");
 const config = require('../config/config.json');
 
 class ShoukakuHandler extends Shoukaku {
     constructor(client) {
-        super(new Libraries.DiscordJS(client), config.LAVALINK_SERVERS, {
+        super(new Connectors.DiscordJS(client), config.LAVALINK_SERVERS, {
             moveOnDisconnect: true,
             resumable: true,
             resumableTimeout: 3600,
