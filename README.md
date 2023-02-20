@@ -37,7 +37,7 @@ npm start
 
 Note: Lavalink servers are JAR files which should be hosted on a server or locally on  your computer to actually play tracks.
 
-To download it go to [the Official CI server](https://ci.fredboat.com/viewLog.html?buildId=lastSuccessful&buildTypeId=Lavalink_Build&tab=artifacts&guest=1) and download the Lavalink.jar file.
+To download it go to [this repository](https://github.com/freyacodes/Lavalink/releases) and download the Lavalink.jar file.
 
 You also need to configure the Lavalink server with an application.yml file in the same directory as your JAR. There is a premade one in the resources folder which will work without any issues.
 Update the plugin versions regularly by visiting [https://github.com/TopiSenpai/LavaSrc/](https://github.com/TopiSenpai/LavaSrc/releases) and [https://github.com/DuncteBot/skybot-lavalink-plugin/](https://github.com/DuncteBot/skybot-lavalink-plugin/releases) and checking the latest version available.
