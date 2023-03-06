@@ -32,8 +32,7 @@ module.exports = {
       track.info.requester = message.author;
       let q = await message.client.manager.queue.handle(message.guild, message.member, message.channel, node, track);
       q?.play();
-
-      if (res.type.toLowerCase() == "playlist") {
+      if (res.loadType == "PLAYLIST_LOADED") {
         for (const track of res.tracks) {
           track.info.requester = message.author;
           await message.client.manager.queue.handle(message.guild, message.member, message.channel, node, track);
@@ -41,13 +40,12 @@ module.exports = {
 
         message.reply({
           embeds: [embedMessage()
-            .addFields({ name: "Playlist Queued: ", value: `\`${res.playlistName.substring(0, 100)}\``, inline: true })
+            .addFields({ name: "Playlist Queued: ", value: `\`${res.playlistInfo.name.substring(0, 100)}\``, inline: true })
             .addFields({ name: "Requested By: ", value: `${message.author}`, inline: true })
             .addFields({ name: "Number Of Tracks:", value: `\`${res.tracks.length + 1}\``, inline: true })]
         });
         try { return setTimeout(async () => await message.deleteReply(), 40000) } catch (err) { return }
       }
-
       message.reply({
         embeds: [embedMessage()
           .addFields({ name: "Track Queued: ", value: `[\`${track.info.title.substring(0, 100)}\`](${track.info.uri})`, inline: true })
@@ -59,25 +57,26 @@ module.exports = {
   },
 };
 
-async function getRes(t, node) {
-  try {
-    new URL(t)
-    res = await node.rest.resolve(t);
-    if (!res) {
+async function getRes(songId, node) {
+  if (!node) return;
+  try{
+    new URL(songId)
+    const result = await node.rest.resolve(songId);
+    if (!result) {
       for (let i = 0; i < 5; i++) {
-        res = await node.rest.resolve(t);
-        if (res) break;
+        result = await node.rest.resolve(t);
+        if (result) break;
       }
     }
-    return res;
-  } catch (err) {
-    res = await node.rest.resolve(`ytsearch:${t}`);
-    if (!res) {
+    return result;
+  }catch(err){
+    const result = await node.rest.resolve(`ytsearch:${songId}`);
+    if (!result) {
       for (let i = 0; i < 5; i++) {
-        res = await node.rest.resolve(`ytsearch:${t}`);
-        if (res) break;
+        const result = await node.rest.resolve(`ytsearch:${songId}`);
+        if (result) break;
       }
     }
-    return res;
+    return result;
   }
 }

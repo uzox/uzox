@@ -16,7 +16,7 @@ module.exports = {
         .fetchClientValues('guilds.cache.size')
         .then(async (res) => { client.serverCount = addArray(res) })
 
-      if (client.serverCount) await client.user.setActivity(`music | ${client.serverCount} servers | ${client.memberCount} users | shard ${client.shard.count}`, { type: "LISTENING" })
+      if (client.serverCount) await client.user.setActivity(`music | ${client.serverCount} Server(s) | ${client.memberCount} Users | Shard #${client.shard.count}`, { type: "LISTENING" })
 
       setInterval(async () => await setServerCount(client), 30000);
 
@@ -28,7 +28,7 @@ module.exports = {
           .fetchClientValues('guilds.cache.size')
           .then(async (res) => { client.serverCount = addArray(res) })
 
-        if (client.serverCount) await client.user.setActivity(`music | ${client.serverCount} servers | ${client.memberCount} users | shard ${client.shard.count}`, { type: ActivityType.Listening })
+        if (client.serverCount) await client.user.setActivity(`music | ${client.serverCount} Server(s) | ${client.memberCount} Users | Shard #${client.shard.count}`, { type: ActivityType.Listening })
       }
     } catch (err) { }
   },
