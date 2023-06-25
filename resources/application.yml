@@ -38,12 +38,12 @@ plugins:
       soundgasm: true # soundgasm.net
 lavalink:
   plugins:
-    - dependency: "com.github.TopiSenpai.LavaSrc:lavasrc-plugin:3.2.0" # replace vx.x.x with the latest release tag!
+    - dependency: "com.github.TopiSenpai.LavaSrc:lavasrc-plugin:3.2.4" # replace vx.x.x with the latest release tag!
       repository: "https://jitpack.io"
-    - dependency: "com.dunctebot:skybot-lavalink-plugin:1.4.1"
+    - dependency: "com.dunctebot:skybot-lavalink-plugin:1.4.2"
       repository: "https://m2.duncte123.dev/releases"
   server:
-    password: ""
+    password: "password"
     sources:
       youtube: true
       bandcamp: true
