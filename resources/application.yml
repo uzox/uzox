@@ -4,7 +4,7 @@ server: # REST and WS server
 plugins:
   lavasrc:
     providers: # Custom providers for track loading. This is the default
-      - "ytmsearch:\"%ISRC%\"" # Will be ignored if track does not have an ISRC. See https://en.wikipedia.org/wiki/International_Standard_Recording_Code
+      - "ytsearch:\"%ISRC%\"" # Will be ignored if track does not have an ISRC. See https://en.wikipedia.org/wiki/International_Standard_Recording_Code
       - "ytmsearch:%QUERY%" # Will be used if track has no ISRC or no track could be found for the ISRC
       - "dzisrc:\"%ISRC%\"" # Deezer ISRC provider
       - "scsearch:%QUERY%" # you can add multiple other fallback sources here
