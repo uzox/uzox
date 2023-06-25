@@ -1,17 +1,21 @@
 const embedContent = require("../util/embedContent");
 const buttonsFunctions = require("../reaction_util/buttonsFunctions");
 const defaultchannel = require("../models/defaultchannel");
+const config = require("../../config/config.json");
 
 module.exports = {
     async handleNewInteraction(interaction) {
         try {
-            let channel = (await defaultchannel.findOne({ GuildID: interaction.guild.id }))?.ChannelID;
-            if (channel && channel !== interaction.channel.id) {
-                if (!["setdefaultchannel", "removedefaultchannel"].includes(interaction.commandName)) {
-                    try { return interaction.reply({ embeds: [embedContent(`The default text channel you can run commands in is <#${(await defaultchannel.findOne({ GuildID: interaction.guild.id }))?.ChannelID}>\n\nIf you can't see/open this channel, it's probably because you don't have access to it.`)], ephemeral: true }) } catch (err) { }
-                    return;
+            if (config?.MONGODB_URI) {
+                let channel = (await defaultchannel.findOne({ GuildID: interaction.guild.id }))?.ChannelID;
+                if (channel && channel !== interaction.channel.id) {
+                    if (!["setdefaultchannel", "removedefaultchannel"].includes(interaction.commandName)) {
+                        try { return interaction.reply({ embeds: [embedContent(`The default text channel you can run commands in is <#${(await defaultchannel.findOne({ GuildID: interaction.guild.id }))?.ChannelID}>\n\nIf you can't see/open this channel, it's probably because you don't have access to it.`)], ephemeral: true }) } catch (err) { }
+                        return;
+                    }
                 }
             }
+
             if (interaction.isButton()) {
                 interaction.author = interaction.user;
                 await interaction.deferReply();
