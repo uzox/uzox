@@ -30,6 +30,6 @@
   },
   "scripts": {
     "dev": "node .",
-    "start": "NODE_ENV=production node ."
+    "start": "node ."
   }
 }
