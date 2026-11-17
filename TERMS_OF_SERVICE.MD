@@ -1,6 +1,6 @@
 # Terms of Service
 
-Last updated: June 24, 2026
+Last updated: November 17, 2026
 
 These Terms of Service ("Terms") govern your access to and use of the Uzox Discord application, website, dashboard, support channels, premium features, and related services (the "Service").
 
@@ -31,6 +31,8 @@ You agree not to use the Service to do anything unlawful, harmful, deceptive, ab
 ## Content and Requests
 
 The Service may process commands, links, metadata, files, settings, or other content provided by users or third-party services. We do not claim ownership of content you own.
+
+Links and names from services such as YouTube, Spotify, SoundCloud, and Apple Music are used only to identify the music you ask for. Uzox is not affiliated with, endorsed by, or sponsored by those services.
 
 You remain solely responsible for the content, materials, sources, services, and requests you use with the Service. We may refuse, remove, limit, block, disable, or report content, requests, servers, users, or usage that we believe may violate these Terms, applicable law, platform rules, third-party rights, or the safe operation of the Service.
 
