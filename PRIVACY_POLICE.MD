@@ -1,6 +1,6 @@
 # Privacy Policy
 
-Last updated: November 8, 2026
+Last updated: November 21, 2026
 
 This Privacy Policy explains how Uzox ("Uzox", "we", "us", or "our") handles information when you add, access, or use the Uzox Discord application, website, dashboard, support channels, premium features, or related services (the "Service").
 
@@ -36,7 +36,11 @@ When you visit uzox.xyz, we record how you use the site so we can improve it:
 - Technical details: browser, screen and window size, language, time zone, device and connection hints, page performance (Core Web Vitals) and script errors.
 - The approximate country Cloudflare reports for your connection.
 
-These records are linked to a first-party cookie named `uz_sid` (30 days) and, if you log in with Discord, to your Discord user ID. Website analytics are on by default. You can opt out at any time through "privacy choices" in the site footer; your choice is stored in the `uz_consent` cookie for 180 days. If you opt out, or your browser sends Global Privacy Control, we remove the `uz_sid` cookie, store nothing about your visits, and only count anonymous page views and page-speed measurements. We do not use advertising or third-party tracking cookies.
+These records are linked to a first-party cookie named `uz_sid` (30 days) and, if you log in with Discord, to your Discord user ID. Website analytics are on by default. You can opt out at any time through "privacy choices" in the site footer; your choice is stored in the `uz_consent` cookie for 180 days. If you opt out, or your browser sends Global Privacy Control, we remove the `uz_sid` cookie, store nothing about your visits, and only count anonymous page views and page-speed measurements.
+
+#### Google Ads measurement
+
+We run ads on Google and use the Google Ads tag (provided by Google LLC) to count how many visits from those ads lead to someone adding Uzox to a server. The tag runs only while website analytics are on. It sets Google cookies such as `_gcl_au` and, when you arrive from a Google ad, `_gcl_aw`, and it sends Google your browser details, the page address and, after you add Uzox through the website, a conversion event. We do not send Google your Discord ID, server IDs or anything you type. We turn off ad personalization in the tag, so this data is not used to build audiences or show you personalized ads. If you opt out or your browser sends Global Privacy Control, the tag does not load, or it is told to stop storing ad data if it already loaded. Google's handling of this data is described in its privacy policy at https://policies.google.com/privacy.
 
 We may process information automatically through Discord, our hosting providers, databases, analytics, security tools, payment providers, support tools, and other service providers that help us operate the Service.
 
